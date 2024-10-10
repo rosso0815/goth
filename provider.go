@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	log "github.com/sirupsen/logrus"
+
 	"golang.org/x/oauth2"
 )
 
@@ -39,6 +41,7 @@ func UseProviders(viders ...Provider) {
 
 // GetProviders returns a list of all the providers currently in use.
 func GetProviders() Providers {
+
 	return providers
 }
 
@@ -55,6 +58,7 @@ func GetProvider(name string) (Provider, error) {
 // ClearProviders will remove all providers currently in use.
 // This is useful, mostly, for testing purposes.
 func ClearProviders() {
+	log.Info("@-- ClearProviders")
 	providers = Providers{}
 }
 
