@@ -22,6 +22,8 @@ import (
 	"os"
 	"strings"
 
+	log "github.com/sirupsen/logrus"
+
 	"github.com/go-chi/chi/v5"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
@@ -43,6 +45,7 @@ type key int
 const ProviderParamKey key = iota
 
 func init() {
+	log.Info("@-- init")
 	key := []byte(os.Getenv("SESSION_SECRET"))
 	keySet = len(key) != 0
 
