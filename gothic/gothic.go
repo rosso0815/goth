@@ -25,7 +25,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
-	"github.com/markbates/goth"
+	"github.com/rosso0815/goth"
 )
 
 // SessionName is the key used to access the session store.
