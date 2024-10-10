@@ -12,7 +12,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/markbates/goth"
+	"github.com/rosso0815/goth"
 	"golang.org/x/oauth2"
 )
 
